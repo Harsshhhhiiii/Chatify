@@ -6,4 +6,4 @@ module.exports = {
 	},
 	plugins: [require("daisyui")], // DaisyUI plugin
   };
-  
+  98 

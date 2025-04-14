@@ -8,7 +8,6 @@ import messageRoutes from "./routes/message.routes.js";
 import userRoutes from "./routes/user.routes.js";
 import connectToMongoDB from "./db/connectToMongoDB.js";
 import { app, server } from "./socket/socket.js";
-import User from "./models/user.model.js";
 dotenv.config();
 
 const __dirname = path.resolve();
@@ -19,7 +18,7 @@ app.use(cookieParser());
 app.use(cors({
 	origin:"*"
 }))
-app.use("/api/auth", authRoutes);
+app.use("/api/auth", authRoutes);  
 app.use("/api/messages", messageRoutes);
 app.use("/api/users", userRoutes);
 
