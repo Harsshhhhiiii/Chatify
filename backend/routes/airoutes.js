@@ -1,10 +1,11 @@
 import express from "express";
+import { flirtfunction } from "../controllers/aisuggestions.js";
 import protectRoute from "../middleware/protectRoute.js";
-import { getUsersForSidebar } from "../controllers/user.controller.js";
-
 const router = express.Router();
 
-router.get("/", protectRoute, getUsersForSidebar);
-
+router.get("/flirt/:id", protectRoute, flirtfunction);
 
 export default router;
+
+
+
